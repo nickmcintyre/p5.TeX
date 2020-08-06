@@ -1,0 +1,39 @@
+{
+  "name": "p5.tex",
+  "version": "0.0.1",
+  "description": "A typesetting library for p5.js",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "katex": "^0.12.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "mocha-chrome": "^2.2.0",
+    "p5": "^1.1.9",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.cjs",
+    "test": "mocha-chrome test/test.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickmcintyre/p5.TeX.git"
+  },
+  "keywords": [
+    "p5",
+    "tex",
+    "latex",
+    "katex",
+    "math"
+  ],
+  "author": "Nick McIntyre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickmcintyre/p5.TeX/issues"
+  },
+  "homepage": "https://github.com/nickmcintyre/p5.TeX#readme"
+}
