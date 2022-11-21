@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.1.1",
+    "mocha": "^10.1.0",
     "mocha-chrome": "^2.2.0",
     "p5": "^1.1.9",
     "webpack": "^4.44.1",
