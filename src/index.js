@@ -7,10 +7,9 @@ import p5Utils from './p5Utils';
  * 
  * @param {string} tex A TeX expression
  * @param {p5.Element} element The p5.Element to render into
- * @param {Object} options KaTeX options (optional)
  */
-const render = function renderTeX(tex, element, options) {
-  katex.render(tex, element.elt, options);
+const render = function renderTeX(tex, element) {
+  katex.render(tex, element.elt, { output: 'mathml' });
 };
 
 /**
@@ -18,11 +17,10 @@ const render = function renderTeX(tex, element, options) {
  * 
  * @param {string} tag The tag for the new element
  * @param {string} tex A TeX expression
- * @param {Object} options KaTeX options (optional)
  */
-p5.prototype.createTeX = function createTeXElement(tag, tex, options) {
+p5.prototype.createTeX = function createTeXElement(tag, tex) {
   const elt = p5Utils.p5Instance.createElement(tag);
-  render(tex, elt, options);
+  render(tex, elt);
 
   return elt;
 };

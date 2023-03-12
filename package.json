@@ -1,23 +1,27 @@
 {
   "name": "p5.tex",
-  "version": "0.0.1",
-  "description": "A typesetting library for p5.js",
+  "version": "0.0.2",
+  "description": "A p5.js addon library for beautiful typesetting",
   "main": "index.js",
-  "type": "module",
   "dependencies": {
-    "katex": "^0.12.0"
+    "katex": "^0.16.4"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.6",
+    "karma": "^6.4.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-mocha": "^2.0.1",
     "mocha": "^10.1.0",
-    "mocha-chrome": "^2.2.0",
-    "p5": "^1.1.9",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^3.3.12"
+    "p5": "^1.6.0",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.cjs",
-    "test": "mocha-chrome test/test.html"
+    "build": "webpack --config webpack.config.js",
+    "test": "karma start --single-run --browsers ChromeHeadless karma.conf.js",
+    "dev": "webpack --watch --config webpack.config.js",
+    "all": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
