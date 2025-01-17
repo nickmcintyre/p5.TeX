@@ -4,7 +4,7 @@
   "description": "A p5.js addon library for beautiful typesetting",
   "main": "index.js",
   "dependencies": {
-    "katex": "^0.16.10"
+    "katex": "^0.16.21"
   },
   "devDependencies": {
     "chai": "^4.3.6",
